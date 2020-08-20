@@ -2,6 +2,7 @@ package magic101;
 
 public class Slime extends Enemy{
 	//vars
+	//
 	private boolean hasForm;
 	private boolean isAcidic;
 	//constructors m
