@@ -11,14 +11,12 @@ public class Dragon extends Enemy{
 		setBreathingFire(false);
 	}
 	public Dragon(String name,int might,boolean isHostile) {
-		this.name=name;
-		this.might = might;
-		this.isHostile = isHostile;
+		super(name,might,isHostile);
+		setFlying(true);
+		setBreathingFire(false);
 
 	}public Dragon(String name,int might,boolean isHostile,boolean flying,boolean breathingFire) {
-		this.name=name;
-		this.might = might;
-		this.isHostile = isHostile;
+		super(name,might,isHostile);
 		this.flying = flying;
 		this.breathingFire = breathingFire;
 
@@ -35,8 +33,12 @@ public class Dragon extends Enemy{
 	public void setBreathingFire(boolean breathingFire) {
 		this.breathingFire = breathingFire;
 	}
-	//getters/setters
-	
+	public boolean canRun() {
+		return !(flying&&breathingFire)||might>100;
+	}
+	public String mightReact() {
+		return (might<10)?"weak":(might<20)?"average":"stronk";
+	}
 	//toString
 	@Override
 	public String toString() {

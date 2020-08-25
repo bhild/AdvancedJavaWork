@@ -12,14 +12,12 @@ public class Slime extends Enemy{
 		setAcidic(false);
 	}
 	public Slime(String name,int might,boolean isHostile) {
-		this.name=name;
-		this.might = might;
-		this.isHostile = isHostile;
 
+		super(name,might,isHostile);
+		setHasForm(true);
+		setAcidic(false);
 	}public Slime(String name,int might,boolean isHostile,boolean hasForm,boolean isAcidic) {
-		this.name=name;
-		this.might = might;
-		this.isHostile = isHostile;
+		super(name,might,isHostile);
 		this.setHasForm(hasForm);
 		this.setAcidic(isAcidic);
 
@@ -43,5 +41,16 @@ public class Slime extends Enemy{
 	}
 	public void setAcidic(boolean isAcidic) {
 		this.isAcidic = isAcidic;
+	}
+	public String reactSlime() {
+		if(isAcidic&&hasForm)
+			return "run!!!";
+		if (isAcidic||hasForm) {
+			return "probobly fine";
+		}
+		return "what a generic slime";
+	}
+	public boolean isScarry() {
+		return (might>10&&isAcidic||might>20&&!hasForm||!hasForm&&isAcidic);
 	}
 }

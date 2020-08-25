@@ -11,20 +11,28 @@ public class Monster extends Enemy{
 		this.isDummy = false;
 	}
 	public Monster(String name,int might,boolean isHostile) {
-		this.name=name;
-		this.might = might;
-		this.isHostile = isHostile;
+		super(name,might,isHostile);
+		this.element = "water";
+		this.isDummy = false;
 
 	}public Monster(String name,int might,boolean isHostile,String element,boolean isDummy) {
-		this.name=name;
-		this.might = might;
-		this.isHostile = isHostile;
+		super(name,might,isHostile);
 		this.element = element;
 		this.isDummy = isDummy;
 
 	}//end full constructor
-	public String mightReact() {
-		return (might<10)?"weak":(might<20)?"average":"stronk";
+	
+	public String isMonstrous() {
+		 if (might>1000) {
+			return "this is a monster for the ages";
+		}
+		if (might>100) {
+			return "this mosnter is a terror";
+		}
+		if (might>50) {
+			return "very monstorus";
+		}
+		return "not very monstrous";
 	}
 	//getters/setters
 	

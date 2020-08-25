@@ -1,6 +1,7 @@
 package magic101;
 
 public abstract class Enemy {
+	protected static int count = 0;
 	protected String name;
 	protected int might;
 	protected boolean isHostile;
@@ -8,6 +9,14 @@ public abstract class Enemy {
 		this.name=null;
 		this.might = 0;
 		this.isHostile = true;
+		count++;
+	}
+	public Enemy(String name,int might,boolean isHostile) {
+		this.name=name;
+		this.might = might;
+		this.isHostile = isHostile;
+		count++;
+
 	}
 	protected String getName() {
 		return name;
@@ -26,6 +35,9 @@ public abstract class Enemy {
 	}
 	protected void setHostile(boolean isHostile) {
 		this.isHostile = isHostile;
+	}
+	public static int getEnemyCount() {
+		return count;
 	}
 	@Override
 	public String toString() {
