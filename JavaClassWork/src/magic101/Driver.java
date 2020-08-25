@@ -10,7 +10,7 @@ public class Driver {
 		Monster mem = new Monster("Memnrach",1000,true,"artifact",false);
 		Slime scavengingOoze = new Slime("nameless", 50, true, false, false);
 		Slime gelatiunsCube  = new Slime("nameless", 20, true, false, true);
-		Sorcerer karn = new Sorcerer(false, 100, "Karn, Liberated", "artifact");
+		Sorcerer karn = new Sorcerer(false, 20, "Karn, Liberated", "artifact");
 		Sorcerer ugin = new Sorcerer(false, 100, "Ugin, the Ineffable", "null");
 		Utamog.setElement("devoid");
 		scavengingOoze.setName("ooze");
@@ -29,7 +29,11 @@ public class Driver {
 			System.out.println(e.toString());
 		}
 		System.out.println(karn.toString());
+		System.out.println();
 		System.out.println(ugin.toString());
+		System.out.println();
+
+		System.out.println("Sorcerer count: "+Sorcerer.getNumSorcerers());
 		System.out.println("slime percentAcid: "+Slime.percentAcid());
 		System.out.println("Monster number of Dummies: "+Monster.getNumDums());
 		System.out.println("Dragon legend count: "+Dragon.getNumLegends());
