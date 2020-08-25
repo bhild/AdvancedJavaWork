@@ -61,7 +61,7 @@ public class Sorcerer {
 	public boolean powerfull() {
 		return knownSpells>20;
 	}
-	public boolean isEldrazi() {
+	public boolean isOutlier() {
 		return element.equalsIgnoreCase("devoid")||element.equalsIgnoreCase("chaos")||element.equalsIgnoreCase("null");
 	}
 	
