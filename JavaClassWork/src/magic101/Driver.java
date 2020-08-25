@@ -6,10 +6,12 @@ public class Driver {
 	public static void main(String[] args) {
 		Dragon bolas = new Dragon("Nicol Bolas",1000,true,true,true);
 		Dragon nullDragon = new Dragon();
-		Monster Utamog = new Monster("Ulamog",1000000,true,"devoid",false);
+		Monster Utamog = new Monster("Ulamog",1000000,true,"dust",false);
 		Monster mem = new Monster("Memnrach",1000,true,"artifact",false);
 		Slime scavengingOoze = new Slime("nameless", 50, true, false, false);
 		Slime gelatiunsCube  = new Slime("nameless", 20, true, false, true);
+		Utamog.setElement("devoid");
+		scavengingOoze.setName("ooze");
 		ArrayList<Enemy> enemies = new ArrayList<Enemy>();
 		enemies.add(bolas);
 		enemies.add(nullDragon);
