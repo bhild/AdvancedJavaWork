@@ -64,5 +64,9 @@ public class Sorcerer {
 	public boolean isOutlier() {
 		return element.equalsIgnoreCase("devoid")||element.equalsIgnoreCase("chaos")||element.equalsIgnoreCase("null");
 	}
+	@Override
+	public String toString() {
+		return "name: "+name+"\nknownSpells: "+knownSpells+"\niselement: "+ element+"\nisNatural: "+isNatural;
+	}
 	
 }
