@@ -4,6 +4,7 @@ public class Monster extends Enemy{
 	//vars
 	private boolean isDummy;
 	private String element;
+	private static int numDums = 0;
 	//constructors
 	public Monster() {
 		super();
@@ -19,6 +20,7 @@ public class Monster extends Enemy{
 		super(name,might,isHostile);
 		this.element = element;
 		this.isDummy = isDummy;
+		numDums+=(isDummy)?1:0;
 
 	}//end full constructor
 	
@@ -55,5 +57,8 @@ public class Monster extends Enemy{
 	}
 	public String isAqua() {
 		return (element.equalsIgnoreCase("water"))?"usless":"might be dangrous";
+	}
+	public static int getNumDums() {
+		return numDums;
 	}
 }
