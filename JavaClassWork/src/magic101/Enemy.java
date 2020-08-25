@@ -1,7 +1,7 @@
 package magic101;
 
 public abstract class Enemy {
-	protected static int count = 0;
+	private static int count = 0;
 	protected String name;
 	protected int might;
 	protected boolean isHostile;
