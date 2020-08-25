@@ -58,5 +58,11 @@ public class Sorcerer {
 	public static int getNumSorcerers() {
 		return numSorcerers;
 	}
+	public boolean powerfull() {
+		return knownSpells>20;
+	}
+	public boolean isEldrazi() {
+		return element.equalsIgnoreCase("devoid")||element.equalsIgnoreCase("chaos")||element.equalsIgnoreCase("null");
+	}
 	
 }
